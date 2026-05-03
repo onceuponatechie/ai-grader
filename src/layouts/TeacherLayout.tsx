@@ -12,6 +12,7 @@ import type { NavItem, PageContext } from '@/types/nav';
 import { Sidebar } from '@/components/Sidebar';
 import { TopBar } from '@/components/TopBar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useTeacher } from '@/hooks/useTeacher';
 import { cn } from '@/lib/cn';
 
 const navItems: NavItem[] = [
@@ -52,6 +53,7 @@ export function TeacherLayout({ children }: Props) {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const teacher = useTeacher();
 
   // Close the drawer on route change.
   useEffect(() => {
@@ -66,7 +68,7 @@ export function TeacherLayout({ children }: Props) {
         {/* Desktop sidebar */}
         {isDesktop && (
           <div className="sticky top-0 h-screen shrink-0">
-            <Sidebar items={navItems} />
+            <Sidebar items={navItems} teacher={teacher} />
           </div>
         )}
 
@@ -75,6 +77,7 @@ export function TeacherLayout({ children }: Props) {
           <MobileDrawer onClose={() => setMobileOpen(false)}>
             <Sidebar
               items={navItems}
+              teacher={teacher}
               onNavigate={() => setMobileOpen(false)}
             />
           </MobileDrawer>
