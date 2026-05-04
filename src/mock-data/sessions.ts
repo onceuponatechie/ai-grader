@@ -1,23 +1,21 @@
 import type { ExamSession } from '@/types';
 
 /**
- * Sessions for the live SS3 mid-term and the SS2 quiz that's now grading.
- * Two students on the live exam are flagged for retake because their
- * connection dropped mid-exam.
+ * Anchored to Monday 2026-05-04 09:43 Lagos (08:43 UTC) so the dashboard
+ * shows a live mid-term in progress with 47 minutes remaining.
  */
 export const sessions: ExamSession[] = [
   // ──────────────────────────────────────────────────────────────
-  // SS3 Mid-Term — live now (started 09:30, ends 11:00 UTC today)
+  // SS3 Mid-Term — live (started 9:00 AM Lagos, ends 10:30 AM Lagos)
   // ──────────────────────────────────────────────────────────────
-  // Currently writing
   {
     id: 'ses_001',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_001',
-    started_at: '2026-05-03T09:30:14.000Z',
+    started_at: '2026-05-04T08:00:14.000Z',
     submitted_at: null,
     status: 'writing',
-    time_remaining_seconds: 2640, // 44 min left
+    time_remaining_seconds: 2820,
     flagged_for_review: false,
     flag_reason: null,
   },
@@ -25,10 +23,10 @@ export const sessions: ExamSession[] = [
     id: 'ses_002',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_002',
-    started_at: '2026-05-03T09:31:02.000Z',
+    started_at: '2026-05-04T08:01:02.000Z',
     submitted_at: null,
     status: 'writing',
-    time_remaining_seconds: 2580,
+    time_remaining_seconds: 2820,
     flagged_for_review: false,
     flag_reason: null,
   },
@@ -36,10 +34,10 @@ export const sessions: ExamSession[] = [
     id: 'ses_003',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_003',
-    started_at: '2026-05-03T09:30:48.000Z',
+    started_at: '2026-05-04T08:00:48.000Z',
     submitted_at: null,
     status: 'writing',
-    time_remaining_seconds: 2610,
+    time_remaining_seconds: 2820,
     flagged_for_review: false,
     flag_reason: null,
   },
@@ -47,10 +45,10 @@ export const sessions: ExamSession[] = [
     id: 'ses_004',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_004',
-    started_at: '2026-05-03T09:32:21.000Z',
+    started_at: '2026-05-04T08:02:21.000Z',
     submitted_at: null,
     status: 'writing',
-    time_remaining_seconds: 2520,
+    time_remaining_seconds: 2820,
     flagged_for_review: false,
     flag_reason: null,
   },
@@ -58,10 +56,10 @@ export const sessions: ExamSession[] = [
     id: 'ses_005',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_005',
-    started_at: '2026-05-03T09:30:55.000Z',
+    started_at: '2026-05-04T08:00:55.000Z',
     submitted_at: null,
     status: 'writing',
-    time_remaining_seconds: 2600,
+    time_remaining_seconds: 2820,
     flagged_for_review: false,
     flag_reason: null,
   },
@@ -69,10 +67,10 @@ export const sessions: ExamSession[] = [
     id: 'ses_006',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_006',
-    started_at: '2026-05-03T09:31:40.000Z',
+    started_at: '2026-05-04T08:01:40.000Z',
     submitted_at: null,
     status: 'writing',
-    time_remaining_seconds: 2555,
+    time_remaining_seconds: 2820,
     flagged_for_review: false,
     flag_reason: null,
   },
@@ -80,10 +78,10 @@ export const sessions: ExamSession[] = [
     id: 'ses_007',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_007',
-    started_at: '2026-05-03T09:30:12.000Z',
+    started_at: '2026-05-04T08:00:12.000Z',
     submitted_at: null,
     status: 'writing',
-    time_remaining_seconds: 2640,
+    time_remaining_seconds: 2820,
     flagged_for_review: false,
     flag_reason: null,
   },
@@ -91,20 +89,19 @@ export const sessions: ExamSession[] = [
     id: 'ses_008',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_008',
-    started_at: '2026-05-03T09:34:08.000Z',
+    started_at: '2026-05-04T08:04:08.000Z',
     submitted_at: null,
     status: 'writing',
-    time_remaining_seconds: 2400,
+    time_remaining_seconds: 2820,
     flagged_for_review: false,
     flag_reason: null,
   },
-  // Already submitted (finished early)
   {
     id: 'ses_009',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_009',
-    started_at: '2026-05-03T09:30:08.000Z',
-    submitted_at: '2026-05-03T10:09:33.000Z',
+    started_at: '2026-05-04T08:00:08.000Z',
+    submitted_at: '2026-05-04T08:35:33.000Z',
     status: 'submitted',
     time_remaining_seconds: null,
     flagged_for_review: false,
@@ -114,8 +111,8 @@ export const sessions: ExamSession[] = [
     id: 'ses_010',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_010',
-    started_at: '2026-05-03T09:31:50.000Z',
-    submitted_at: '2026-05-03T10:11:14.000Z',
+    started_at: '2026-05-04T08:01:50.000Z',
+    submitted_at: '2026-05-04T08:38:14.000Z',
     status: 'submitted',
     time_remaining_seconds: null,
     flagged_for_review: false,
@@ -125,37 +122,36 @@ export const sessions: ExamSession[] = [
     id: 'ses_011',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_011',
-    started_at: '2026-05-03T09:30:33.000Z',
-    submitted_at: '2026-05-03T10:14:55.000Z',
+    started_at: '2026-05-04T08:00:33.000Z',
+    submitted_at: '2026-05-04T08:41:55.000Z',
     status: 'submitted',
     time_remaining_seconds: null,
     flagged_for_review: false,
     flag_reason: null,
   },
-  // Network dropped — flagged for retake
   {
     id: 'ses_012',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_012',
-    started_at: '2026-05-03T09:30:21.000Z',
+    started_at: '2026-05-04T08:00:21.000Z',
     submitted_at: null,
     status: 'needs_retake',
     time_remaining_seconds: null,
     flagged_for_review: true,
     flag_reason:
-      'Connection dropped at 09:54. Student was on question 4 of 10. Session could not be resumed within the 5-minute window.',
+      'Connection dropped at 9:24 AM. Student was on question 4 of 10. Session could not be resumed within the 5-minute window.',
   },
   {
     id: 'ses_013',
     exam_id: 'exm_ss3_midterm',
     student_id: 'std_013',
-    started_at: '2026-05-03T09:30:45.000Z',
+    started_at: '2026-05-04T08:00:45.000Z',
     submitted_at: null,
     status: 'needs_retake',
     time_remaining_seconds: null,
     flagged_for_review: true,
     flag_reason:
-      'Browser closed unexpectedly at 09:47. Student reported a power cut. No work has been lost — answers up to question 3 were saved.',
+      'Browser closed unexpectedly at 9:17 AM. Student reported a power cut. No work has been lost — answers up to question 3 were saved.',
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -192,7 +188,8 @@ export const sessions: ExamSession[] = [
     status: 'auto_submitted',
     time_remaining_seconds: 0,
     flagged_for_review: false,
-    flag_reason: 'Time ran out before student submitted. Saved answers were submitted automatically.',
+    flag_reason:
+      'Time ran out before student submitted. Saved answers were submitted automatically.',
   },
   {
     id: 'ses_104',
@@ -236,6 +233,7 @@ export const sessions: ExamSession[] = [
     status: 'auto_submitted',
     time_remaining_seconds: 0,
     flagged_for_review: false,
-    flag_reason: 'Time ran out before student submitted. Saved answers were submitted automatically.',
+    flag_reason:
+      'Time ran out before student submitted. Saved answers were submitted automatically.',
   },
 ];
