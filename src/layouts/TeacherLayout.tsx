@@ -59,7 +59,10 @@ export function TeacherLayout({ children }: Props) {
     setMobileOpen(false);
   }, [location.pathname]);
 
-  const page = pageByPath[location.pathname] ?? { title: 'Marka' };
+  const page = pageByPath[location.pathname] ??
+    (location.pathname.startsWith('/exams/new')
+      ? { title: 'Creating an exam' }
+      : { title: 'Marka' });
 
   return (
     <div className="min-h-screen bg-canvas text-ink">

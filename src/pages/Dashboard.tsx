@@ -40,7 +40,7 @@ export function Dashboard() {
   const lastName = teacher?.full_name.split(' ').slice(-1)[0] ?? '';
 
   function handleCreate() {
-    navigate('/exams/new');
+    navigate('/exams/new/details');
   }
 
   return (
