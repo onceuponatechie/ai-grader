@@ -80,7 +80,7 @@ export const spacing = {
 
 export const radius = {
   control: 10,
-  card: 14,
+  card: 16,
   pill: 999,
 } as const;
 

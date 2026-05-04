@@ -35,7 +35,7 @@ export default {
         'label': ['11px', { lineHeight: '1.2', letterSpacing: '0.08em' }],
       },
       borderRadius: {
-        card: '14px',
+        card: '16px',
         control: '10px',
       },
       boxShadow: {
@@ -44,6 +44,20 @@ export default {
       },
       maxWidth: {
         content: '1200px',
+      },
+      keyframes: {
+        livepulse: {
+          '0%, 100%': { transform: 'scale(1)', opacity: '0.6' },
+          '50%': { transform: 'scale(1.6)', opacity: '0' },
+        },
+        skeleton: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.55' },
+        },
+      },
+      animation: {
+        livepulse: 'livepulse 1.8s ease-out infinite',
+        skeleton: 'skeleton 1.4s ease-in-out infinite',
       },
     },
   },

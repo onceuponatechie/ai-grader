@@ -26,7 +26,6 @@ const navItems: NavItem[] = [
 const pageByPath: Record<string, PageContext> = {
   '/': {
     title: 'Dashboard',
-    primaryAction: { label: 'Create Exam' },
   },
   '/exams': {
     title: 'Exams',
