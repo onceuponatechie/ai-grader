@@ -47,7 +47,11 @@ export function GradingActivityCard({ exams }: Props) {
       {totalToReview > 0 && (
         <div className="mt-auto pt-6">
           <Link
-            to="/results?filter=needs_review"
+            to={
+              visible.length === 1
+                ? `/exams/${visible[0].id}/grading`
+                : '/exams?filter=needs_review'
+            }
             className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink hover:underline"
           >
             Review flagged scripts

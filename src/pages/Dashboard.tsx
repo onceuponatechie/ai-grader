@@ -182,7 +182,13 @@ function DashboardBody({
               value={totalFlagged}
               description={flaggedDescription}
               icon={FileSearch}
-              to={totalFlagged > 0 ? '/results?filter=needs_review' : undefined}
+              to={
+                flaggedExams.length === 1
+                  ? `/exams/${flaggedExams[0].id}/grading`
+                  : flaggedExams.length > 1
+                    ? '/exams?filter=needs_review'
+                    : undefined
+              }
               emphasis={totalFlagged > 0 ? 'attention' : 'none'}
             />
             <StatusCard
@@ -192,7 +198,7 @@ function DashboardBody({
               icon={CheckCircle2}
               to={
                 readyExams.length === 1
-                  ? `/exams/${readyExams[0].id}`
+                  ? `/exams/${readyExams[0].id}/publish`
                   : readyExams.length > 1
                     ? '/exams?filter=ready_to_publish'
                     : undefined

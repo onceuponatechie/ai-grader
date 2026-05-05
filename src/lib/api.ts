@@ -19,10 +19,12 @@ import type {
 import { exams } from '@/mock-data/exams';
 import { questions } from '@/mock-data/questions';
 import { questionBanks } from '@/mock-data/question-banks';
-import { sessions } from '@/mock-data/sessions';
-import { gradedResponses } from '@/mock-data/graded-responses';
-import { students } from '@/mock-data/students';
 import { teacher } from '@/mock-data/teacher';
+import {
+  getAllResponses,
+  getAllSessions,
+  getAllStudents,
+} from '@/lib/mock-extras';
 
 function delay(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -66,22 +68,27 @@ export async function getQuestionsForBank(bankId: string): Promise<Question[]> {
 
 export async function getSessions(examId: string): Promise<ExamSession[]> {
   await delay(jitter());
-  return sessions.filter((s) => s.exam_id === examId);
+  return getAllSessions().filter((s) => s.exam_id === examId);
+}
+
+export async function getSession(sessionId: string): Promise<ExamSession | null> {
+  await delay(jitter(120, 220));
+  return getAllSessions().find((s) => s.id === sessionId) ?? null;
 }
 
 export async function getGradedResponses(
   sessionId: string,
 ): Promise<GradedResponse[]> {
   await delay(jitter());
-  return gradedResponses.filter((r) => r.session_id === sessionId);
+  return getAllResponses().filter((r) => r.session_id === sessionId);
 }
 
 export async function getStudents(): Promise<Student[]> {
   await delay(jitter());
-  return students;
+  return getAllStudents();
 }
 
 export async function getStudent(id: string): Promise<Student | null> {
   await delay(jitter(120, 220));
-  return students.find((s) => s.id === id) ?? null;
+  return getAllStudents().find((s) => s.id === id) ?? null;
 }
